@@ -1,0 +1,71 @@
+{
+    "name": "SenchaLayout",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.3.74",
+            "frameworkVersion": "4.2.1.883"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost:1841/LayoutSample/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.0.3",
+    "xdsBuild": 1382,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "2dcbce18-27e8-4a35-b5f8-4149dd302c3f",
+            "7ab850ed-6d90-4560-964a-07de4a1eb594",
+            "54c63b9c-cfe9-4585-bf51-4bc49957e7bd",
+            "61ecd185-a1ab-4bd9-9db0-8041af227141",
+            "a0a06d2a-b621-48c5-ade8-d0a771909a2d"
+        ],
+        "store": [
+            "1e6b3eff-1f9b-41ce-a87e-80e6e7e61a0a",
+            "bfab2135-c4b7-44c1-a713-e98ebeb6f8ec",
+            "d32c1a67-a59e-4117-905c-54881e4a6fd3",
+            "8ede0030-ad44-44e0-9ae0-a3ac48645a1e",
+            "2882aefe-82c7-4f40-adeb-497c6017e43f",
+            "0408d47d-5c8a-45a9-9f16-09a55335103f",
+            "16e73457-8b47-4694-9962-501c858a75c1"
+        ],
+        "controller": [
+            "65c67693-5eeb-4d3c-9501-7f888031e221",
+            "47e36b87-06f2-49df-9e32-4964a5331d28",
+            "2bd92588-deac-4ba7-840c-7471ced1cae5"
+        ],
+        "model": [
+            "579e4605-5109-4b41-9541-b326a3e88833",
+            "1b7c1dd4-369a-4ea9-ac7e-4712b88047c6"
+        ],
+        "resource": [
+            "8e4cccdc-d372-4b7d-8c57-79373c6e25c7",
+            "35208796-1f72-4807-9f0b-67662e744958",
+            "fbf0c1a9-53bd-4b88-aea2-f508930584f6"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

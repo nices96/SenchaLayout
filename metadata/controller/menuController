@@ -1,0 +1,170 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menuController"
+    },
+    "designerId": "65c67693-5eeb-4d3c-9501-7f888031e221",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#menuBtn1",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "menu1",
+                "implHandler": [
+                    "//Ext.MessageBox.alert('Msg', 'Btn1 clicked.');",
+                    "var menuPanel = this.getMenuPanel();",
+                    "var centerContainer = this.getCenterContainer();",
+                    "menuPanel.layout.setActiveItem(0);",
+                    "centerContainer.layout.setActiveItem(0);",
+                    "",
+                    "menuPanel.setTitle('Menu 1');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "c8c700d2-bb92-43f5-88ea-6d90b483f44e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#menuBtn2",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "menu2",
+                "implHandler": [
+                    "var menuPanel = this.getMenuPanel();",
+                    "var centerContainer = this.getCenterContainer();",
+                    "menuPanel.layout.setActiveItem(1);",
+                    "centerContainer.layout.setActiveItem(1);",
+                    "",
+                    "menuPanel.setTitle('Menu 2');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "160c713c-93d7-4f79-b519-1a329597a973"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#menuBtn3",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "menu3",
+                "implHandler": [
+                    "var menuPanel = this.getMenuPanel();",
+                    "var centerContainer = this.getCenterContainer();",
+                    "menuPanel.layout.setActiveItem(2);",
+                    "centerContainer.layout.setActiveItem(2);",
+                    "",
+                    "menuPanel.setTitle('Menu 3');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "d4b8eb4c-def4-4d4d-9a1d-94d6cf8a6d3f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "centerContainer",
+                "selector": "#centerContainer"
+            },
+            "designerId": "0607aea0-06fe-40ad-9326-372128eaa023"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "menuPanel",
+                "selector": "#menuPanel"
+            },
+            "designerId": "f019056a-a43b-4d06-b92a-a8ba1887a094"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "this.menu1();"
+                ]
+            },
+            "designerId": "c50073da-6adc-4d40-90dc-656532d1716e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "menuitem",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onMenuitemClick",
+                "implHandler": [
+                    "if(item.child() === null) {",
+                    "    Ext.Msg.alert('Message', Ext.getCmp(item.getItemId()).text + ' selected');",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "c3f6c4f5-c5fe-4375-86c8-c3a05a2cab42"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#menuView1, #subMenuView1, #subMenuView2, #subMenuView3",
+                "designer|targetType": "Ext.tree.View",
+                "fn": "onTreeViewClick",
+                "implHandler": [
+                    "if (record.get('leaf')) {",
+                    "    Ext.Msg.alert('Msg', record.get('text') + ' selected.');",
+                    "}"
+                ],
+                "name": "cellclick",
+                "scope": "me"
+            },
+            "designerId": "d3d20bae-4257-46e8-bbbf-eafc209cfc01"
+        }
+    ]
+}

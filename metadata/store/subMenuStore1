@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "subMenuStore1",
+        "root": [
+            "{",
+            "    expanded: true,",
+            "    text: \"Sub Menu 1\",",
+            "    children: [",
+            "        { ",
+            "            text: \"Sub Menu 1-1\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"Sub Menu 1-1-1\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-1-2\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-1-3\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        },",
+            "        { ",
+            "            text: \"Sub Menu 1-2\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"Sub Menu 1-2-1\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-2-2\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-2-3\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        },",
+            "        { ",
+            "            text: \"Sub Menu 1-3\", ",
+            "            expanded: true,",
+            "            children: [",
+            "            \t{ ",
+            "                    text: \"Sub Menu 1-3-1\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-3-2\", ",
+            "                    leaf: true ",
+            "                },",
+            "                { ",
+            "                    text: \"Sub Menu 1-3-3\", ",
+            "                    leaf: true ",
+            "                }",
+            "        \t] ",
+            "        }",
+            "    ]",
+            "}"
+        ],
+        "storeId": "subMenuStore1"
+    },
+    "designerId": "bfab2135-c4b7-44c1-a713-e98ebeb6f8ec",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "designerId": "b184dd1e-974f-4ca1-ac42-0b76561968ba"
+        }
+    ]
+}

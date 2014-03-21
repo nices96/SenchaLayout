@@ -1,0 +1,42 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "menuController",
+            "recordController",
+            "chartController"
+        ],
+        "models": [
+            "SampleData",
+            "CompanyData"
+        ],
+        "name": "MyApp",
+        "requires": [
+            "Ext.layout.container.Border",
+            "Ext.layout.container.Card",
+            "Ext.layout.container.Accordion",
+            "Ext.window.MessageBox"
+        ],
+        "stores": [
+            "menuStore1",
+            "subMenuStore1",
+            "subMenuStore2",
+            "subMenuStore3",
+            "CompanyStore",
+            "Radar"
+        ],
+        "views": [
+            "LayoutSample",
+            "DetailPanel",
+            "TabPanel",
+            "ListPanel",
+            "RecordForm"
+        ]
+    },
+    "designerId": "application"
+}

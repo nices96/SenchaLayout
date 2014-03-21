@@ -1,0 +1,57 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{",
+            "    'Name': 'Price',",
+            "    'Data': 100",
+            "}, {",
+            "    'Name': 'Revenue %',",
+            "    'Data': 100",
+            "}, {",
+            "    'Name': 'Growth %',",
+            "    'Data': 100",
+            "}, {",
+            "    'Name': 'Product %',",
+            "    'Data': 100",
+            "}, {",
+            "    'Name': 'Market %',",
+            "    'Data': 100",
+            "}]"
+        ],
+        "designer|userClassName": "Radar",
+        "storeId": "Radar"
+    },
+    "designerId": "16e73457-8b47-4694-9962-501c858a75c1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name"
+            },
+            "designerId": "8abc0394-d7fd-4b4a-8381-fb53e60b1cd6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Data"
+            },
+            "designerId": "472917b6-dcf8-4c06-826a-7ef30fd93e72"
+        }
+    ]
+}

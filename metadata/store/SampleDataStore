@@ -1,0 +1,65 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[ ",
+            "    { \"id\": 1, \"title\": \"Item 1\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/1/2010\", \"isFeatured\": true },",
+            "    { \"id\": 2, \"title\": \"Item 2\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/2/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 3, \"title\": \"Item 3\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/3/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 4, \"title\": \"Item 4\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/4/2010\", \"isFeatured\": true  },",
+            "    { \"id\": 5, \"title\": \"Item 5\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/5/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 6, \"title\": \"Item 6\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/6/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 7, \"title\": \"Item 7\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/7/2010\", \"isFeatured\": true  },",
+            "    { \"id\": 8, \"title\": \"Item 8\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/8/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 9, \"title\": \"Item 9\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/9/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 10, \"title\": \"Item 10\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/10/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 11, \"title\": \"Item 11\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/2/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 12, \"title\": \"Item 12\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/3/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 13, \"title\": \"Item 13\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/4/2010\", \"isFeatured\": true  },",
+            "    { \"id\": 14, \"title\": \"Item 14\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/5/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 15, \"title\": \"Item 15\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/6/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 16, \"title\": \"Item 16\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/7/2010\", \"isFeatured\": true  },",
+            "    { \"id\": 17, \"title\": \"Item 17\", \"description\": \"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"date\":  \"10/8/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 18, \"title\": \"Item 18\", \"description\": \"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\", \"date\":  \"10/9/2010\", \"isFeatured\": false  },",
+            "    { \"id\": 19, \"title\": \"Item 19\", \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\", \"date\":  \"10/10/2010\", \"isFeatured\": false  }",
+            "]"
+        ],
+        "designer|userClassName": "SampleDataStore",
+        "model": "SampleData",
+        "pageSize": 10,
+        "purgePageCount": null,
+        "storeId": "SampleDataStore"
+    },
+    "designerId": "2882aefe-82c7-4f40-adeb-497c6017e43f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enablePaging": true
+            },
+            "designerId": "e87f9a88-0ca1-493f-b153-3faf2aa06451",
+            "cn": [
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "b78fd675-4441-42c5-881d-ee841bd484da"
+                }
+            ]
+        }
+    ]
+}

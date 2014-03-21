@@ -1,0 +1,103 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "collapsible": true,
+        "designer|userAlias": "detailpanel",
+        "designer|userClassName": "DetailPanel",
+        "height": 150,
+        "itemId": "detailPanel",
+        "resizable": null,
+        "title": "Detail"
+    },
+    "designerId": "54c63b9c-cfe9-4585-bf51-4bc49957e7bd",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "hidden": true,
+                "itemId": "detailToolbar"
+            },
+            "designerId": "1508917d-1bf8-4e82-98eb-a5f8b5d90ee2",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "icon": "resources/images/page_white_edit.png",
+                        "itemId": "editBtn",
+                        "layout|flex": null,
+                        "text": "Edit"
+                    },
+                    "designerId": "076dbe21-b5d2-418c-9bac-f7227e0ed66b"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "designerId": "f560a541-c532-489e-8182-9ee324f26beb"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "icon": "resources/images/page_white_delete.png",
+                        "itemId": "deleteBtn",
+                        "layout|flex": null,
+                        "text": "Delete"
+                    },
+                    "designerId": "0736eacf-f432-454e-9c01-e327c06e280a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<tpl if=\"values.id\">",
+                    "    <h3>ID : {id}</h3>",
+                    "    <h3>Title : {title}</h3>",
+                    "    <h3>Description : {description}</h3>",
+                    "    <h3>Date : {date}</h3>",
+                    "    <h3>isFeatured : {isFeatured}</h3>",
+                    "</tpl>",
+                    "",
+                    "<tpl if=\"!values.id\">",
+                    "    <h1>Please select a record</h1>",
+                    "</tpl>"
+                ]
+            },
+            "designerId": "17f4f06d-c6ee-4d55-a8da-cb847e1fc47f"
+        }
+    ]
+}

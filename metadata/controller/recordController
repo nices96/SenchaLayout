@@ -1,0 +1,301 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "recordController",
+        "stores": [
+            "SampleDataStore"
+        ]
+    },
+    "designerId": "47e36b87-06f2-49df-9e32-4964a5331d28",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailPanel",
+                "selector": "#detailPanel"
+            },
+            "designerId": "2c4de11f-a279-48f1-88dd-ce13a38fea80"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailToolbar",
+                "selector": "#detailToolbar"
+            },
+            "designerId": "5b881bdb-9bb9-4062-827c-dde992bd9cc5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#gridPanel",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "select",
+                "implHandler": [
+                    "var details = this.getDetailPanel(),",
+                    "    toolbar = this.getDetailToolbar();",
+                    "",
+                    "details.update(record.data);",
+                    "toolbar.show();"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "1be23b66-6b94-4245-846b-63f1d92b43c1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "gridPanel",
+                "selector": "#gridPanel"
+            },
+            "designerId": "31722f44-436a-4808-b7fb-52fa89783653"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "var detailPanel = this.getDetailPanel();",
+                    "detailPanel.update(null);"
+                ]
+            },
+            "designerId": "27317d66-1d87-4b5b-9d4b-ae90df9463d8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "add",
+                "implHandler": [
+                    "var formWindow = Ext.create('widget.recordForm'),",
+                    "    form = formWindow.down('form').getForm(),",
+                    "    model = Ext.create('model.record');",
+                    "",
+                    "form.loadRecord(model);",
+                    "formWindow.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "e9b768f4-4c5d-4eb1-8147-b16c9d7ff5cd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#cancelBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "cancel",
+                "implHandler": [
+                    "var formWindow = target.up(\"window\");",
+                    "formWindow.destroy();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "6ce178ee-38f3-49f9-9fc6-bcd7955c3140"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#saveBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "save",
+                "implHandler": [
+                    "var form = target.up('form').getForm(),",
+                    "    formWindow = target.up('window'),",
+                    "    detailPanel = this.getDetailPanel(),",
+                    "    detailToolbar = this.getDetailToolbar(),",
+                    "    record = form.getRecord(),",
+                    "    store = this.getSampleDataStoreStore(),",
+                    "    isNew = !record.get('id');",
+                    "",
+                    "var errors = form.updateRecord();",
+                    "",
+                    "if (form.isValid()) {",
+                    "    if (isNew) {",
+                    "        var id = store.getTotalCount() + 1;",
+                    "        record.set(\"id\", id);",
+                    "",
+                    "        store.add(record);",
+                    "    }",
+                    "",
+                    "    store.commitChanges();",
+                    "    detailPanel.update(record.getData());",
+                    "    formWindow.destroy();",
+                    "} else {",
+                    "    form.markInvalid(errors);",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "bd6d7dee-1b43-4564-93ae-f84205018f65"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#editBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "edit",
+                "implHandler": [
+                    "var data = target.up('panel').data,",
+                    "    store = this.getSampleDataStoreStore(),",
+                    "    record = store.getById(data.id),",
+                    "    formWindow = Ext.create('widget.recordForm'),",
+                    "    form = formWindow.down('form').getForm();",
+                    "",
+                    "form.loadRecord(record);",
+                    "formWindow.show();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "adc40b16-12c4-4d58-a385-e27b73c9447a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#detailPanel #deleteBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "deleteOne",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "Ext.Msg.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {",
+                    "    if (btn == 'yes') {",
+                    "        var data = target.up('panel').data,",
+                    "            store = me.getSampleDataStoreStore(),",
+                    "            record = store.getById(data.id),",
+                    "            detailPanel = me.getDetailPanel(),",
+                    "            detailToolbar = me.getDetailToolbar();",
+                    "",
+                    "        store.remove(record);",
+                    "        detailPanel.update(null);",
+                    "        detailToolbar.hide();",
+                    "    }",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "6e480d22-0802-4385-a234-5a7b60fea586"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#gridPanel #deleteBtn",
+                "designer|params": [
+                    "target"
+                ],
+                "designer|targetType": null,
+                "fn": "deleteAll",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "var gridPanel = this.getGridPanel();",
+                    "var records = gridPanel.getSelectionModel().getSelection();",
+                    "",
+                    "if (records.length === 0) {",
+                    "    Ext.Msg.alert('Message', 'No selection record.');",
+                    "} else {",
+                    "    Ext.Msg.confirm('Confirm', 'Are you sure you want to delete selected record?', function(btn) {",
+                    "        if (btn == 'yes') {",
+                    "            var store = me.getSampleDataStoreStore(),",
+                    "                detailPanel = me.getDetailPanel(),",
+                    "                detailToolbar = me.getDetailToolbar();",
+                    "",
+                    "            for (i = 0; i < records.length; i++) {",
+                    "                store.remove(records[i]);",
+                    "            }",
+                    "",
+                    "            detailPanel.update(null);",
+                    "            detailToolbar.hide();",
+                    "        }",
+                    "    });",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "94c05746-dc06-441a-95fa-0260a8bdd913"
+        }
+    ]
+}

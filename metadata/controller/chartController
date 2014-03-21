@@ -1,0 +1,127 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "chartController"
+    },
+    "designerId": "2bd92588-deac-4ba7-840c-7471ced1cae5",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "selectedItem"
+                ],
+                "fn": "highlightCompany",
+                "implHandler": [
+                    "var name = selectedItem.get('company'),",
+                    "    series = this.getCompanyChart().series.get(0),",
+                    "    items = series.items;",
+                    "",
+                    "series.highlight = true;",
+                    "series.unHighlightItem();",
+                    "series.cleanHighlights();",
+                    "",
+                    "items.forEach(function(item) {",
+                    "    if (name == item.storeItem.get('company')) {",
+                    "        series.highlightItem(item);",
+                    "    }",
+                    "});",
+                    "",
+                    "series.highlight = false;"
+                ]
+            },
+            "designerId": "27fcfa05-5017-4a59-8463-b6d4342c7d7c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRadarChart",
+                "implHandler": [
+                    "Ext.getStore('Radar').loadData(",
+                    "    [",
+                    "        {",
+                    "            'Name': 'Price',",
+                    "            'Data': record.get('price')",
+                    "        },",
+                    "        {",
+                    "            'Name': 'Revenue %',",
+                    "            'Data': record.get('revenue')",
+                    "        },",
+                    "        {",
+                    "            'Name': 'Growth %',",
+                    "            'Data': record.get('growth')",
+                    "        },",
+                    "        {",
+                    "            'Name': 'Product %',",
+                    "            'Data': record.get('product')",
+                    "        },",
+                    "        {",
+                    "            'Name': 'Market %',",
+                    "            'Data': record.get('market')",
+                    "        }",
+                    "    ]",
+                    ");"
+                ]
+            },
+            "designerId": "d3fc3893-e601-446c-8424-e3a75174902b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "companyChart",
+                "selector": "#companyChart"
+            },
+            "designerId": "a418104b-3685-4be1-a1d3-10537d0acc47"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#companyGridPanel",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelectionChange",
+                "implHandler": [
+                    "selected = selected[0];",
+                    "if (selected) {    ",
+                    "    // highlight items",
+                    "    this.highlightCompany(selected);",
+                    "    ",
+                    "    // update radar",
+                    "    this.updateRadarChart(selected);",
+                    "    ",
+                    "}"
+                ],
+                "name": "selectionchange",
+                "scope": "me"
+            },
+            "designerId": "bff91a37-6216-4878-aad1-27482cf8aef0"
+        }
+    ]
+}

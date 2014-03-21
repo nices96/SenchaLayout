@@ -1,0 +1,149 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "recordForm",
+        "designer|userClassName": "RecordForm",
+        "height": 253,
+        "itemId": "recordForm",
+        "layout": "fit",
+        "title": "Add Record",
+        "width": 408
+    },
+    "designerId": "a0a06d2a-b621-48c5-ade8-d0a771909a2d",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "itemId": "form",
+                "layout": "auto",
+                "title": null
+            },
+            "designerId": "d5e2b524-740d-478c-be2d-a52a99989dec",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Title",
+                        "itemId": null,
+                        "name": "title",
+                        "validateBlank": true,
+                        "width": 360
+                    },
+                    "designerId": "d3d1edce-60f6-49ea-812e-8c84baef9015"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Description",
+                        "itemId": null,
+                        "name": "description",
+                        "width": 360
+                    },
+                    "designerId": "4373e087-95cc-402d-ad86-ad9845f7dbdd"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Date",
+                        "itemId": null,
+                        "name": "date",
+                        "width": 360
+                    },
+                    "designerId": "48bf59af-15fa-4024-b186-a3fe4e8d9d9c"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": null,
+                        "designer|displayName": null,
+                        "fieldLabel": "Is Featured",
+                        "itemId": null,
+                        "name": "isFeatured",
+                        "width": 360
+                    },
+                    "designerId": "4e020d1a-6410-416b-aa8b-7ca936899b7a"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "designer|displayName": "Buttons",
+                        "layout": "hbox"
+                    },
+                    "designerId": "ef0a79e6-5bfe-48aa-afa3-6fe5920d5a55",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "resources/images/accept.png",
+                                "itemId": "saveBtn",
+                                "layout|margins": "",
+                                "margin": "5 5 5 5",
+                                "text": "Save"
+                            },
+                            "designerId": "0dd0fa02-de81-4b16-b139-c36d31693e76"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "resources/images/cancel.png",
+                                "itemId": "cancelBtn",
+                                "layout|margins": "",
+                                "margin": "5 5 5 5",
+                                "text": "Cancel"
+                            },
+                            "designerId": "a6d52ca5-3bff-4c76-83a6-d50b1ed58321"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

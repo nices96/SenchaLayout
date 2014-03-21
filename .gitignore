@@ -1,0 +1,7 @@
+.project
+.settings
+.architect
+.sencha
+ext
+build
+build.xml
