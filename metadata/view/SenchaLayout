@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|initialView": true,
-        "designer|userClassName": "LayoutSample",
+        "designer|userClassName": "SenchaLayout",
         "layout": "border"
     },
     "designerId": "2dcbce18-27e8-4a35-b5f8-4149dd302c3f",

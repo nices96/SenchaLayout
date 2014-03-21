@@ -40,7 +40,7 @@ Ext.application({
         'Radar'
     ],
     views: [
-        'LayoutSample',
+        'SenchaLayout',
         'DetailPanel',
         'TabPanel',
         'ListPanel',
@@ -54,7 +54,7 @@ Ext.application({
     name: 'MyApp',
 
     launch: function() {
-        Ext.create('MyApp.view.LayoutSample');
+        Ext.create('MyApp.view.SenchaLayout');
     }
 
 });
