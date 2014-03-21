@@ -14,7 +14,7 @@
                 "width": null
             }
         },
-        "urlPrefix": "http://localhost:1841/LayoutSample/",
+        "urlPrefix": "http://localhost:1841/SenchaLayout/",
         "exportPath": "",
         "spacesToIndent": 4,
         "sdkPath": "",
