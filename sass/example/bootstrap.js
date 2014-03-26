@@ -428,7 +428,6 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.grid.RowEditor": [],
   "Ext.grid.RowEditorButtons": [],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [],
   "Ext.grid.ViewDropZone": [],
   "Ext.grid.column.Action": [
@@ -865,8 +864,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "MyApp.controller.chartController": [],
   "MyApp.controller.menuController": [],
   "MyApp.controller.recordController": [],
+  "MyApp.model.CarData": [],
   "MyApp.model.CompanyData": [],
   "MyApp.model.SampleData": [],
+  "MyApp.store.CarDataStore": [],
   "MyApp.store.CompanyStore": [],
   "MyApp.store.Radar": [],
   "MyApp.store.SampleDataStore": [],
@@ -875,10 +876,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "MyApp.store.subMenuStore2": [],
   "MyApp.store.subMenuStore3": [],
   "MyApp.view.DetailPanel": [],
-  "MyApp.view.LayoutSample": [],
   "MyApp.view.ListPanel": [],
   "MyApp.view.Main": [],
   "MyApp.view.RecordForm": [],
+  "MyApp.view.SenchaLayout": [],
   "MyApp.view.TabPanel": [],
   "MyApp.view.Viewport": []
 });
@@ -1318,7 +1319,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.grid.RowEditorButtons": [
     "widget.roweditorbuttons"
   ],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [
     "widget.gridview"
   ],
@@ -1889,10 +1889,12 @@ Ext.ClassManager.addNameAliasMappings({
   "MyApp.controller.chartController": [],
   "MyApp.controller.menuController": [],
   "MyApp.controller.recordController": [],
+  "MyApp.model.CarData": [],
   "MyApp.model.CompanyData": [],
   "MyApp.model.SampleData": [
     "model.record"
   ],
+  "MyApp.store.CarDataStore": [],
   "MyApp.store.CompanyStore": [],
   "MyApp.store.Radar": [],
   "MyApp.store.SampleDataStore": [],
@@ -1903,7 +1905,6 @@ Ext.ClassManager.addNameAliasMappings({
   "MyApp.view.DetailPanel": [
     "widget.detailpanel"
   ],
-  "MyApp.view.LayoutSample": [],
   "MyApp.view.ListPanel": [
     "widget.listPanel"
   ],
@@ -1913,6 +1914,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MyApp.view.RecordForm": [
     "widget.recordForm"
   ],
+  "MyApp.view.SenchaLayout": [],
   "MyApp.view.TabPanel": [
     "widget.tabPanel"
   ],

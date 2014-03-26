@@ -1,6 +1,6 @@
 {
     "webBuild": {
-        "environment": "testing",
-        "publishPath": ""
+        "environment": "production",
+        "publishPath": "/Development/project/peacock/workspace/SenchaLayout/WebContent/"
     }
 }

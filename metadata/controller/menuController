@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "menuController"
+        "designer|userClassName": "menuController",
+        "stores": [
+            "CompanyStore"
+        ]
     },
     "designerId": "65c67693-5eeb-4d3c-9501-7f888031e221",
     "cn": [
@@ -52,7 +55,34 @@
                     "menuPanel.layout.setActiveItem(1);",
                     "centerContainer.layout.setActiveItem(1);",
                     "",
-                    "menuPanel.setTitle('Menu 2');"
+                    "menuPanel.setTitle('Menu 2');",
+                    "",
+                    "/*",
+                    "var columns = [",
+                    "    { text: 'Company',  dataIndex: 'company' },",
+                    "    { text: 'Price', dataIndex: 'price' },",
+                    "    { text: 'Revenue', dataIndex: 'revenue' },",
+                    "    { text: 'Growth', dataIndex: 'growth' },",
+                    "    { text: 'Product', dataIndex: 'product' },",
+                    "    { text: 'Market', dataIndex: 'market' }",
+                    "];",
+                    "",
+                    "var grid = this.getGridPanel();",
+                    "var store = Ext.data.StoreManager.lookup('CompanyStore');",
+                    "grid.reconfigure(store, columns);",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    //url: 'http://localhost:8080/gradle_sample/customers/getCars.do',",
+                    "    url: 'http://localhost:8080/gradle_sample/cars.js',",
+                    "    params: null,",
+                    "    success: function(response){",
+                    "        //var jsonObj = Ext.JSON.decode(response.responseText);",
+                    "        //grid1.setSource(jsonObj.data);",
+                    "        console.log(response.responseText);",
+                    "        alert(response.responseText);",
+                    "    }",
+                    "});",
+                    "*/"
                 ],
                 "name": "click",
                 "scope": "me"
@@ -119,7 +149,36 @@
             "userConfig": {
                 "fn": "onLaunch",
                 "implHandler": [
-                    "this.menu1();"
+                    "this.menu1();",
+                    "",
+                    "/*",
+                    "Ext.data.JsonP.request({",
+                    "    url: 'http://localhost:8080/gradle_sample/customers/getCars.do',",
+                    "    callbackKey: 'callback',",
+                    "    params: {",
+                    "        id: 'scpark',",
+                    "        name: 'Sang Cheon Park'",
+                    "    },",
+                    "    callback: function(result, response) {",
+                    "        //console.log(result);",
+                    "        //console.log(response.data[0]);",
+                    "    },",
+                    "    success: function(response) {",
+                    "        console.log(response);",
+                    "        console.log(response.data);",
+                    "        console.log(response.data.length);",
+                    "        console.log(response.data.toString());",
+                    "",
+                    "        var result = response.data;",
+                    "        var length = result.length;",
+                    "",
+                    "        for (var i = 0; i < length; i++) {",
+                    "            var k = result[i];",
+                    "            console.log(k);",
+                    "        }",
+                    "    }",
+                    "});",
+                    "*/"
                 ]
             },
             "designerId": "c50073da-6adc-4d40-90dc-656532d1716e"
@@ -165,6 +224,19 @@
                 "scope": "me"
             },
             "designerId": "d3d20bae-4257-46e8-bbbf-eafc209cfc01"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "gridPanel",
+                "selector": "#gridPanel"
+            },
+            "designerId": "928c1dbf-24e5-4f39-84fc-5966ee06240e"
         }
     ]
 }

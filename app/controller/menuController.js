@@ -16,6 +16,10 @@
 Ext.define('MyApp.controller.menuController', {
     extend: 'Ext.app.Controller',
 
+    stores: [
+        'CompanyStore'
+    ],
+
     refs: [
         {
             ref: 'centerContainer',
@@ -24,6 +28,10 @@ Ext.define('MyApp.controller.menuController', {
         {
             ref: 'menuPanel',
             selector: '#menuPanel'
+        },
+        {
+            ref: 'gridPanel',
+            selector: '#gridPanel'
         }
     ],
 
@@ -44,6 +52,33 @@ Ext.define('MyApp.controller.menuController', {
         centerContainer.layout.setActiveItem(1);
 
         menuPanel.setTitle('Menu 2');
+
+        /*
+        var columns = [
+            { text: 'Company',  dataIndex: 'company' },
+            { text: 'Price', dataIndex: 'price' },
+            { text: 'Revenue', dataIndex: 'revenue' },
+            { text: 'Growth', dataIndex: 'growth' },
+            { text: 'Product', dataIndex: 'product' },
+            { text: 'Market', dataIndex: 'market' }
+        ];
+
+        var grid = this.getGridPanel();
+        var store = Ext.data.StoreManager.lookup('CompanyStore');
+        grid.reconfigure(store, columns);
+
+        Ext.Ajax.request({
+            //url: 'http://localhost:8080/gradle_sample/customers/getCars.do',
+            url: 'http://localhost:8080/gradle_sample/cars.js',
+            params: null,
+            success: function(response){
+                //var jsonObj = Ext.JSON.decode(response.responseText);
+                //grid1.setSource(jsonObj.data);
+                console.log(response.responseText);
+                alert(response.responseText);
+            }
+        });
+        */
     },
 
     menu3: function(button, e, eOpts) {
@@ -69,6 +104,35 @@ Ext.define('MyApp.controller.menuController', {
 
     onLaunch: function() {
         this.menu1();
+
+        /*
+        Ext.data.JsonP.request({
+            url: 'http://localhost:8080/gradle_sample/customers/getCars.do',
+            callbackKey: 'callback',
+            params: {
+                id: 'scpark',
+                name: 'Sang Cheon Park'
+            },
+            callback: function(result, response) {
+                //console.log(result);
+                //console.log(response.data[0]);
+            },
+            success: function(response) {
+                console.log(response);
+                console.log(response.data);
+                console.log(response.data.length);
+                console.log(response.data.toString());
+
+                var result = response.data;
+                var length = result.length;
+
+                for (var i = 0; i < length; i++) {
+                    var k = result[i];
+                    console.log(k);
+                }
+            }
+        });
+        */
     },
 
     init: function(application) {
